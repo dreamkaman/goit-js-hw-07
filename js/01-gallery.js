@@ -24,7 +24,6 @@ const onImageClick = function (event) {
 
     event.preventDefault();
 
-
     instance = basicLightbox.create(`<img src="${event.target.dataset.source}" width="800" height="600">`);
 
     instance.show();
@@ -32,10 +31,6 @@ const onImageClick = function (event) {
 };
 
 divGallery.addEventListener('click', onImageClick);
-
-// const onEscPush = function () {
-    
-// }
 
 document.addEventListener('keydown', (event)=> {
     if (event.key === 'Escape'&&instance) {
