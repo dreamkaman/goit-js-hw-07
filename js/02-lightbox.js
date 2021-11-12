@@ -1,8 +1,4 @@
 import { galleryItems } from './gallery-items.js';
-// Change code below this line
-
-//console.log(galleryItems);
-
 
 const ulGallery = document.querySelector('.gallery');
 
@@ -12,16 +8,13 @@ const markup = galleryItems.map(function ({ preview, original, description }) {
 }
 ).join("");
 
-
 ulGallery.insertAdjacentHTML("beforeend", markup);
 
 const onImageClick = function (event) {
 
     event.preventDefault();
 
-    let gallery = new SimpleLightbox('.gallery a', { captionsData: 'alt',  captionDelay: 250,  captionPosition: 'bottom',});
-  
-};
+    let gallery = new SimpleLightbox('.gallery a', { captionsData: 'alt',  captionDelay: 250,  captionPosition: 'bottom',})};
 
 ulGallery.addEventListener('click', onImageClick);
 
