@@ -14,7 +14,7 @@ const onImageClick = function (event) {
 
     event.preventDefault();
 
-    let gallery = new SimpleLightbox('.gallery a', { captionsData: 'alt',  captionDelay: 250,  captionPosition: 'bottom',})};
+    new SimpleLightbox('.gallery a', { captionsData: 'alt',  captionDelay: 250,  captionPosition: 'bottom',})};
 
 ulGallery.addEventListener('click', onImageClick);
 
