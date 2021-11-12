@@ -4,7 +4,7 @@ import { galleryItems } from './gallery-items.js';
 //console.log(galleryItems);
 
 
-const divGallery = document.querySelector('.gallery');
+const ulGallery = document.querySelector('.gallery');
 
 const markup = galleryItems.map(function ({ preview, original, description }) {
     
@@ -13,7 +13,7 @@ const markup = galleryItems.map(function ({ preview, original, description }) {
 ).join("");
 
 
-divGallery.insertAdjacentHTML("beforeend", markup);
+ulGallery.insertAdjacentHTML("beforeend", markup);
 
 const onImageClick = function (event) {
 
@@ -23,7 +23,7 @@ const onImageClick = function (event) {
   
 };
 
-divGallery.addEventListener('click', onImageClick);
+ulGallery.addEventListener('click', onImageClick);
 
 
 
