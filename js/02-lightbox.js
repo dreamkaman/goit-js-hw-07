@@ -19,7 +19,7 @@ const onImageClick = function (event) {
 
     event.preventDefault();
 
-    let gallery = new SimpleLightbox('.gallery a', {captions: true, captionSelector: 'alt', captionDelay: 250, captionPosition: 'bottom',});
+    let gallery = new SimpleLightbox('.gallery a', { captionsData: 'alt',  captionDelay: 250,  captionPosition: 'bottom',});
   
 };
 
