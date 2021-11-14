@@ -10,13 +10,12 @@ const markup = galleryItems.map(function ({ preview, original, description }) {
 
 ulGallery.insertAdjacentHTML("beforeend", markup);
 
-const onImageClick = function (event) {
-
-    event.preventDefault();
-
-    new SimpleLightbox('.gallery a', { captionsData: 'alt',  captionDelay: 250,  captionPosition: 'bottom',})};
-
-ulGallery.addEventListener('click', onImageClick);
+new SimpleLightbox('.gallery a', {
+    captionsData: 'alt',
+    captionDelay: 250,
+    captionPosition: 'bottom',
+}
+);
 
 
 
