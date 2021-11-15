@@ -22,35 +22,34 @@ let instance;
 
 function onEscPress (event) {
                       
-  if (event.key === 'Escape') {
+      if (event.key === 'Escape') {
 
-    instance.close();
+        instance.close();
 
-    document.removeEventListener('keydown', onEscPress);
-                    
-  };
+        document.removeEventListener('keydown', onEscPress);
+                        
+      };
 
 };
    
-
 const onImageClick = function (event) {
 
-  if (event.target.nodeName === 'IMG') {
+      if (event.target.nodeName === 'IMG') {
+        
+          event.preventDefault();
+          
+          instance = basicLightbox.create(`<img src="${event.target.dataset.source}" width="800" height="600">`);
+                  
+          instance.show();
 
-    instance = basicLightbox.create(`<img src="${event.target.dataset.source}" width="800" height="600">`);
-            
-      event.preventDefault();
+          document.addEventListener('keydown', onEscPress);
+          
+          return;
 
-      instance.show();
+      };
 
-      document.addEventListener('keydown', onEscPress);
-      
-      return;
-
-    };
-
-  document.removeEventListener('keydown', onEscPress);
+document.removeEventListener('keydown', onEscPress);
 
 };
 
- window.addEventListener('click', onImageClick);
+window.addEventListener('click', onImageClick);
