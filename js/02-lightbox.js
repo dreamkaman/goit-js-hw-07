@@ -16,10 +16,3 @@ new SimpleLightbox('.gallery a', {
     captionPosition: 'bottom',
 }
 );
-
-
-
-
-
-
-
